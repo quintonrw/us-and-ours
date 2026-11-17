@@ -377,3 +377,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .band.dark,.b1-about .txt,.site-foot,.b1-cards.weighted .feature{background:var(--b-oxblood)}
 .site-foot .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
 .dark .btn.light-fill:hover,.site-foot .btn:hover{background:var(--alt);border-color:var(--alt);color:var(--ink)}
+/* checklist bullets: smaller burgundy ring with a centred burgundy dot */
+.checks li{grid-template-columns:20px 1fr}
+.checks li::before{width:13px;height:13px;margin-top:6px;border:1.4px solid var(--accent);background:radial-gradient(circle at 50% 50%,var(--accent) 0 2.6px,transparent 3px)}

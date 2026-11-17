@@ -8,18 +8,30 @@ import { site } from '../site';
   <div class="wrap"><section class="pg-hero">
     <div class="copy">
       <p class="eyebrow rise" style="--d:.1s">Couples counselling</p>
-      <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Communicate better. Feel closer.</span></span><span class="mask acc"><span style="--d:.36s">Grow together.</span></span></h1>
-      <div class="stack rise" style="--d:.65s">
-        <p class="lede ink">You can love each other, be committed to your relationship and still find yourselves struggling.</p>
-        <p class="lede">Maybe you keep having the same arguments. Problems keep stacking up. Affection or sex has changed. Resentment has built up. You feel more like roommates than partners. Or parenting, stepfamily life, money, family or other pressures are creating tension between you.</p>
-        <p class="lede">Sometimes there isn’t one big problem. You just don’t feel as good together as you used to. Couples counselling can help you understand what’s happening between you and learn how to do things differently.</p>
-      </div>
+      <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Communicate better.</span></span><span class="mask acc"><span style="--d:.36s">Feel closer. Grow together.</span></span></h1>
+      <p class="lede rise" style="--d:.65s">You can love each other, be committed to your relationship and still find yourselves struggling. Couples counselling can help you understand what’s happening between you and learn how to do things differently.</p>
       <div class="rise" style="--d:.8s;display:flex;gap:14px 20px;flex-wrap:wrap;align-items:center"><a class="btn" href={site.bookingUrl}>Book a free 15-minute consultation <span class="arr">→</span></a><span class="where-line">In-person in Victoria · Virtual across BC</span></div>
     </div>
     <Forms kind="two" />
   </section></div>
 
-  <section class="band alt"><div class="wrap">
+  <section class="band alt"><div class="wrap split2">
+    <div class="reveal stack"><p class="eyebrow">Sound familiar?</p><h2 class="b-h1 h2">Maybe…</h2></div>
+    <div class="reveal">
+      <ul class="checks stagger">
+        <li>You keep having the same arguments.</li>
+        <li>Problems keep stacking up.</li>
+        <li>Affection or sex has changed.</li>
+        <li>Resentment has built up.</li>
+        <li>You feel more like roommates than partners.</li>
+        <li>Parenting, stepfamily life, money, family or other pressures are creating tension between you.</li>
+      </ul>
+      <p class="body">Sometimes there isn’t one big problem. You just don’t feel as good together as you used to.</p>
+    </div>
+  </div></section>
+
+
+  <section class="band"><div class="wrap">
     <div class="reveal" style="max-width:720px"><h2 class="b-h1 h2">What can we work on?</h2></div>
     <div class="areas stagger">
       <div><h3>Communication &amp; conflict</h3><p>Recurring arguments, defensiveness, shutting down, feeling unheard, and conversations that never seem to get anywhere.</p></div>
@@ -29,7 +41,7 @@ import { site } from '../site';
     </div>
   </div></section>
 
-  <section class="band"><div class="wrap split2">
+  <section class="band alt"><div class="wrap split2">
     <div class="reveal"><h2 class="b-h1 h2">What if my partner isn’t as interested in counselling as I am?</h2></div>
     <div class="reveal stack">
       <p class="body">It’s common for one person to be more interested in counselling than the other. You don’t both have to arrive equally enthusiastic or convinced that counselling will help. One person has the power to make significant shifts in the relationship.</p>
@@ -59,5 +71,5 @@ import { site } from '../site';
     </ul>
   </div></section>
 
-  <Close text="I offer a free 15-minute consultation where you can tell me a little about what’s happening, ask questions and get a sense of whether working together feels right to you." />
+  <Close />
 </Base>

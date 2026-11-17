@@ -5,69 +5,31 @@ import Close from '../components/Close.astro';
 import { site } from '../site';
 ---
 <Base title="Home" description="Couples, stepfamily and individual counselling with Rachel Glover, RCC. In-person in Victoria, BC and virtual across BC. Book a free 15-minute consultation.">
-
   <div class="wrap">
     <section class="b1-hero">
       <div class="copy">
-        <p class="eyebrow rise" style="--d:.1s">Rachel Glover, RCC · Victoria, BC</p>
-        <h1 class="b-h1"><span class="mask"><span style="--d:.25s">Relationships take work.</span></span><span class="mask acc"><span style="--d:.45s">But most of us were never taught how.</span></span></h1>
-        <div class="stack rise" style="--d:.8s">
-          <p class="lede">Relationships are an important part of our lives, and they can also come with significant challenges. Whether it’s with a spouse, within a stepfamily, or in other key relationships, sometimes we keep having the same problems despite our best efforts to fix them.</p>
-          <p class="lede">My role is to help you understand what’s happening, see things from a different perspective and learn better ways to handle the relationships that matter to you.</p>
-        </div>
-        <div class="rise" style="--d:.95s;display:flex;gap:14px 20px;flex-wrap:wrap;align-items:center">
-          <a class="btn" href={site.bookingUrl}>Book a free 15-minute consultation <span class="arr">→</span></a>
-          <span class="where-line">In-person in Victoria · Virtual across BC</span>
-        </div>
+        <p class="eyebrow rise" style="--d:.1s">In-person in Victoria · Virtual across BC</p>
+        <h1 class="b-h1"><span class="mask"><span style="--d:.25s">Two people.</span></span><span class="mask acc"><span style="--d:.45s">One way forward.</span></span></h1>
+        <p class="lede rise" style="--d:.8s">Relationships take work, but most of us were never taught how. I’m Rachel Glover, RCC, and I help you understand what’s happening, see it from a different perspective and learn better ways through it.</p>
+        <div class="rise" style="--d:.95s;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href={site.bookingUrl}>Book a free 15-minute consultation <span class="arr">→</span></a><a class="btn ghost" href="#how-it-starts">How it works</a></div>
       </div>
       <Forms kind="two" class="b1-forms" />
     </section>
   </div>
 
-  <!-- Couples: the primary service, given the most weight -->
   <section class="band alt">
-    <div class="wrap svc lead">
-      <div class="reveal stack">
-        <p class="eyebrow">Couples counselling</p>
-        <h2 class="b-h1">Communicate better. Feel closer. <span class="acc">Grow together.</span></h2>
-        <Forms kind="two" class="svc-forms" />
-      </div>
-      <div class="reveal stack">
-        <p class="body">You may find yourselves having the same arguments, responding poorly or avoiding certain conversations altogether.</p>
-        <p class="body">Every couple wants to feel close, and every couple inevitably has differences that can create conflict. It doesn’t have to be one or the other.</p>
-        <p class="body">We’ll look at the patterns you’ve fallen into, help you understand each other better, and learn practical ways to communicate and work through problems as a team.</p>
-        <div><a class="btn" href="/couples">Learn about couples counselling <span class="arr">→</span></a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stepfamily: second focus -->
-  <section class="band dark">
-    <div class="wrap svc">
-      <div class="reveal stack">
-        <p class="eyebrow">Stepparent &amp; stepfamily support</p>
-        <h2 class="b-h1">Stepfamily life is <span class="soft">complex.</span></h2>
-      </div>
-      <div class="reveal stack">
-        <p class="body">Being a stepparent can bring challenges you weren’t expecting: finding your place in the family, different parenting styles, boundaries with the ex-partner or sometimes feeling like an outsider in your own home.</p>
-        <p class="body">You may also find yourself trying too hard to make everything work, longing for closer relationships and simplicity, or struggling to overcome difficult feelings.</p>
-        <p class="body">I will help you understand why it feels so hard and give you a road map that research shows best supports stepfamilies in building a more cohesive and connected family life.</p>
-        <div><a class="btn ghost" href="/stepfamilies">Learn about stepparent &amp; stepfamily support <span class="arr">→</span></a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Individual: lighter weight -->
-  <section class="band">
-    <div class="wrap svc minor">
-      <div class="reveal stack">
-        <p class="eyebrow">Individual counselling</p>
-        <h2 class="b-h1">Change starts with you.</h2>
-      </div>
-      <div class="reveal stack">
-        <p class="body"><span class="strong">Sometimes the only person you can change is yourself.</span> I work with adults who want to better understand themselves and the relationships in their lives. You may be dealing with relationship difficulties, family dynamics, boundaries, a major life change, or patterns you keep finding yourself in.</p>
-        <p class="body">We’ll get clear about what’s happening, look at what is and isn’t within your control, and work on changes that can make a meaningful difference in your life and relationships.</p>
-        <div><a class="textlink" href="/individuals">Learn about individual counselling</a></div>
+    <div class="wrap">
+      <div class="reveal" style="display:flex;flex-direction:column;gap:18px;max-width:760px"><p class="eyebrow">How I can help</p><h2 class="b-h1" style="font-size:clamp(36px,4.4vw,60px)">Practical support for the relationships that matter to you.</h2></div>
+      <div class="b1-cards weighted stagger">
+        <a class="b1-card feature" href="/couples">
+          <svg class="ic" viewBox="0 0 116 80" aria-hidden="true"><use href="#markB-dark" /></svg>
+          <span class="tag">Couples counselling</span>
+          <h3>Communicate better. Feel closer. Grow together.</h3>
+          <p>Every couple wants to feel close, and every couple has differences that create conflict. It doesn’t have to be one or the other. We’ll look at the patterns you’ve fallen into and learn practical ways to work through problems as a team.</p>
+          <span class="more">Learn more <span>→</span></span>
+        </a>
+        <a class="b1-card" href="/stepfamilies"><svg class="ic" viewBox="0 0 116 80" aria-hidden="true"><circle cx="30" cy="40" r="24" fill="#CDB792" /><circle cx="58" cy="40" r="24" fill="none" stroke="#5C1A26" stroke-width="2" /><circle cx="86" cy="40" r="24" fill="none" stroke="#655247" stroke-width="1.4" /></svg><h3>Stepparent &amp; stepfamily support</h3><p>Stepfamily life is complex. I’ll help you understand why it feels so hard, with a road map research shows works.</p><span class="more">Learn more <span>→</span></span></a>
+        <a class="b1-card" href="/individuals"><svg class="ic" viewBox="0 0 116 80" aria-hidden="true"><circle cx="58" cy="40" r="34" fill="none" stroke="#5C1A26" stroke-width="2" /><circle cx="58" cy="40" r="20" fill="#CDB792" /></svg><h3>Individual counselling</h3><p>Change starts with you. Understand what’s keeping you stuck, and what is and isn’t within your control.</p><span class="more">Learn more <span>→</span></span></a>
       </div>
     </div>
   </section>
@@ -76,20 +38,19 @@ import { site } from '../site';
     <div class="photo slide-up"><img src="/img/rachel-chair.jpg" alt="Rachel Glover, RCC, seated in an armchair in her office" style="object-position:50% 8%" loading="lazy" decoding="async" /></div>
     <div class="txt reveal">
       <p class="eyebrow">Meet Rachel</p>
-      <h2 class="b-h1">Hi, I’m Rachel.</h2>
-      <p class="body">I’m a Registered Clinical Counsellor (RCC) based in Victoria, BC, with a passion for working with couples, relationships and stepfamily dynamics.</p>
-      <p class="body">As a wife, mother, stepmother and someone who deeply values strong friendships, I understand that relationships and family life take ongoing work, patience and a willingness to keep learning.</p>
+      <h2 class="b-h1">Warm, direct and actively engaged.</h2>
+      <p class="body">I’m a Registered Clinical Counsellor in Victoria with a passion for couples, relationships and stepfamily dynamics. As a wife, mother and stepmother, I know relationships take ongoing work, patience and a willingness to keep learning.</p>
       <div><a class="btn ghost light" href="/about">More about Rachel <span class="arr">→</span></a></div>
     </div>
   </section>
 
-  <section class="band">
-    <div class="wrap split2">
-      <div class="reveal"><p class="eyebrow">How I work</p><h2 class="b-h1 h2">Warm, direct and <span class="acc">actively engaged.</span></h2></div>
-      <div class="reveal stack">
-        <p class="body">I take a warm yet direct approach to counselling. I am actively engaged in our sessions, asking thought-provoking questions, pointing out patterns and behaviours I notice, and bringing honesty with compassion about what I see.</p>
-        <p class="body">We’ll get clear about what you want to change and keep our sessions focused on those goals.</p>
-        <p class="pull">I want you to leave counselling feeling relieved, equipped with new knowledge and hopeful about what can change.</p>
+  <section class="band" id="how-it-starts">
+    <div class="wrap">
+      <div class="reveal"><p class="eyebrow">How it starts</p></div>
+      <div class="b1-steps stagger">
+        <div class="b1-step"><span class="n">STEP 1</span><h3>Free 15-minute consultation</h3><p class="body">Tell me a little about what’s going on and see whether working together feels right.</p></div>
+        <div class="b1-step"><span class="n">STEP 2</span><h3>First session</h3><p class="body">We get clear about what you want to change and keep our sessions focused on it.</p></div>
+        <div class="b1-step"><span class="n">STEP 3</span><h3>Ongoing sessions</h3><p class="body">In-person at Kings Rd or virtually across BC, with skills to try between sessions.</p></div>
       </div>
     </div>
   </section>

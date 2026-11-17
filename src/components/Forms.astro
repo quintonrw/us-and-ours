@@ -1,0 +1,25 @@
+---
+// Hero symbol variants: "two" (couples), "three" (stepfamily), "one" (individual).
+interface Props { kind?: 'two' | 'three' | 'one'; class?: string }
+const { kind = 'two', class: cls = 'pg-forms' } = Astro.props;
+---
+{kind === 'two' && (
+  <svg class={cls} viewBox="0 0 116 80" aria-hidden="true">
+    <g class="l"><circle cx="40" cy="40" r="36" fill="#CDB792" /></g>
+    <circle class="mid" cx="76" cy="40" r="36" clip-path="url(#clipB)" fill="#5C1A26" />
+    <g class="r"><circle cx="76" cy="40" r="35.3" fill="none" stroke="#5C1A26" stroke-width="1.4" /></g>
+  </svg>
+)}
+{kind === 'three' && (
+  <svg class={cls} viewBox="0 0 116 80" aria-hidden="true">
+    <g class="l"><circle cx="30" cy="40" r="26" fill="#CDB792" /></g>
+    <g class="mid"><circle cx="58" cy="40" r="26" fill="none" stroke="#5C1A26" stroke-width="1.4" /></g>
+    <g class="r"><circle cx="86" cy="40" r="26" fill="none" stroke="#655247" stroke-width="1.1" /></g>
+  </svg>
+)}
+{kind === 'one' && (
+  <svg class={cls} viewBox="0 0 116 80" aria-hidden="true">
+    <g class="r"><circle cx="58" cy="40" r="35.3" fill="none" stroke="#5C1A26" stroke-width="1.4" /></g>
+    <g class="mid"><circle cx="58" cy="40" r="21" fill="#CDB792" /></g>
+  </svg>
+)}

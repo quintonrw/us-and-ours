@@ -27,7 +27,7 @@ if (f) {
       const res = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } });
       if (!res.ok) throw new Error(String(res.status));
       f.reset();
-      say('Thanks, your question is on its way. I’ll reply within two working days.');
+      say('Thanks, your message is on its way.');
     } catch {
       say('Something went wrong sending that. Please try again, or email hello@usandours.com.', true);
     } finally {

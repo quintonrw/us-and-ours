@@ -1,33 +1,81 @@
 ---
 import Base from '../layouts/Base.astro';
+import Forms from '../components/Forms.astro';
+import Close from '../components/Close.astro';
 import { site } from '../site';
 ---
-<Base title="Stepfamily support" description="Stepparent and blended family support in Victoria, BC and across BC with Rachel Glover, RCC.">
-<div class="wrap"><section class="pg-hero">
-      <div class="copy">
-        <p class="eyebrow rise" style="--d:.1s">Stepparent &amp; stepfamily support</p>
-        <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Build the family</span></span><span class="mask acc"><span style="--d:.36s">you’re actually in.</span></span></h1>
-        <p class="lede rise" style="--d:.65s">Bringing two households together is hard on everyone in it. I help stepparents, partners and blended families find roles, routines and ways of talking that work for this family.</p>
-        <div class="rise" style="--d:.8s;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href={site.bookingUrl}>Book a free 15-minute call <span class="arr">→</span></a></div>
+<Base title="Stepparent & stepfamily support" description="Stepparent and stepfamily support in Victoria, BC and virtual across BC with Rachel Glover, RCC. Understand why stepfamily life is hard, and build a family life that works.">
+  <div class="wrap"><section class="pg-hero">
+    <div class="copy">
+      <p class="eyebrow rise" style="--d:.1s">Stepparent &amp; stepfamily support</p>
+      <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Stepfamily life is complex.</span></span><span class="mask acc"><span style="--d:.36s">There are reasons why.</span></span></h1>
+      <div class="stack rise" style="--d:.65s">
+        <p class="lede ink">Stepfamilies don’t operate by the same rules as nuclear families.</p>
+        <p class="lede">They come with different relationships, roles, pressures and emotional realities: pre-existing parent-child bonds, stepparent roles that aren’t always clear, different expectations around parenting, ex-partners, divided loyalties, and questions about where everyone fits.</p>
       </div>
-      <svg class="pg-forms" viewBox="0 0 116 80" aria-hidden="true"><g class="l"><circle cx="30" cy="40" r="26" fill="#CDB792"/></g>
-        <g class="mid"><circle cx="58" cy="40" r="26" fill="none" stroke="#5C1A26" stroke-width="1.4"/></g>
-        <g class="r"><circle cx="86" cy="40" r="26" fill="none" stroke="#655247" stroke-width="1.1"/></g></svg>
-    </section></div><section class="band"><div class="wrap split2">
-      <div class="reveal"><p class="eyebrow">What comes up</p><h2 class="b-h1 h2">The everyday friction of blending</h2></div>
-      <div class="reveal"><ul class="checks stagger"><li>Not knowing where you fit as a stepparent, or how much to parent.</li><li>Feeling caught between your partner and your children.</li><li>Different house rules, discipline styles and expectations.</li><li>Co-parenting with an ex, and the strain it puts on your relationship.</li><li>Kids who are struggling with the change, or pushing back.</li><li>The couple getting lost under everything else.</li></ul></div>
-    </div></section><section class="band alt"><div class="wrap">
-      <div class="reveal" style="max-width:720px;display:flex;flex-direction:column;gap:18px"><p class="eyebrow">Who comes to sessions</p><h2 class="b-h1 h2">Start with whoever is ready.</h2></div>
-      <div class="b1-cards stagger">
-        <div class="b1-card static"><h3>The couple</h3><p>Most stepfamily work starts with the two adults, so you can get on the same page before anything else.</p><span class="meta">Couples rates, from $180</span></div>
-        <div class="b1-card static"><h3>A stepparent on their own</h3><p>Space to talk about how it’s really going for you, and what you’d like to change.</p><span class="meta">Individual rate, $140</span></div>
-        <div class="b1-card static"><h3>A parent on their own</h3><p>For the parent in the middle, balancing loyalty to their kids and their partner.</p><span class="meta">Individual rate, $140</span></div>
+      <div class="rise" style="--d:.8s;display:flex;gap:14px 20px;flex-wrap:wrap;align-items:center"><a class="btn" href={site.bookingUrl}>Book a free 15-minute consultation <span class="arr">→</span></a><span class="where-line">In-person in Victoria · Virtual across BC</span></div>
+    </div>
+    <Forms kind="three" />
+  </section></div>
+
+  <section class="band alt"><div class="wrap split2">
+    <div class="reveal stack">
+      <p class="body">Yet these differences aren’t always well understood or talked about. There are decades of research and specialist knowledge about what helps stepfamilies work, but many families enter stepfamily life without ever being taught what to expect.</p>
+      <p class="body">I’ve taken a particular interest in learning from this work, alongside my own lived experience of stepfamily life.</p>
+    </div>
+    <div class="reveal"><p class="pull">Understanding why stepfamily life can be so hard is often the first step toward feeling less overwhelmed and more in control of what you can actually change.</p></div>
+  </div></section>
+
+  <section class="band"><div class="wrap split2">
+    <div class="reveal stack">
+      <h2 class="b-h1 h2">It’s okay to admit this wasn’t what you thought it would be.</h2>
+      <p class="body">You can love your partner and still struggle with parts of stepfamily life you never anticipated.</p>
+    </div>
+    <div class="reveal">
+      <p class="list-label">Perhaps you:</p>
+      <ul class="checks stagger">
+        <li>Feel like an outsider in your own home or struggle to find your place in the family.</li>
+        <li>Disagree with your partner about parenting, boundaries or your role with their children.</li>
+        <li>Feel resentful of the time, energy or influence that other family members or an ex-partner have on your household.</li>
+        <li>Find yourself doing too much, trying too hard or taking responsibility for keeping everyone happy.</li>
+        <li>Feel guilty that bonding with your stepchildren hasn’t come as naturally as you expected.</li>
+        <li>Worry that your relationship with your partner is getting lost among everyone else’s needs.</li>
+      </ul>
+      <p class="body">You may have tried talking about these things, only to end up feeling misunderstood or even more alone.</p>
+    </div>
+  </div></section>
+
+  <section class="band dark"><div class="wrap split2">
+    <div class="reveal"><h2 class="b-h1 h2">Stepfamilies need a <span class="soft">different approach.</span></h2></div>
+    <div class="reveal stack">
+      <p class="body">Stepfamilies aren’t nuclear families, and expecting them to function the same way can create unnecessary pressure.</p>
+      <p class="body">Relationships develop at different speeds. Parents and children have an established history together, while stepparents are finding their place in a family that existed before they arrived. Roles, boundaries and expectations aren’t always clear, and what feels natural to one person may feel uncomfortable or unfair to another.</p>
+      <p class="body strong">There isn’t one perfect way to be a stepfamily.</p>
+      <p class="body">Understanding these dynamics can help you set more realistic expectations, make sense of difficult feelings and find ways of doing things that work for your family, rather than trying to fit a picture of what you think family life should look like.</p>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="reveal" style="max-width:900px;margin-bottom:clamp(36px,5vw,56px)"><h2 class="b-h1 h2">Find your voice. Create your place. <span class="acc">Build a family life that works.</span></h2></div>
+    <div class="split2">
+      <div class="reveal stack">
+        <p class="body">Whether you come on your own or with your partner, we’ll work together to understand what’s happening in your stepfamily and what you want to change.</p>
+        <p class="body">I’ll help you make sense of the dynamics at play, recognize patterns that may be creating tension and look at what is and isn’t within your control.</p>
+        <p class="body">My aim is to help you feel more confident in how you approach stepfamily life, with a better understanding of yourself, your relationships and what you can do differently.</p>
       </div>
-    </div></section><section class="band"><div class="wrap split2">
-      <div class="reveal"><p class="eyebrow">Questions</p><h2 class="b-h1 h2">Before you book</h2></div>
-      <div class="reveal"><div class="faq reveal"><details><summary>Do you see children or the whole family?<span class="pm" aria-hidden="true"></span></summary><p>My work is with adults: couples, stepparents and parents. If your child would benefit from their own support, I can suggest where to look.</p></details><details><summary>My partner and I disagree about the kids. Is that normal?<span class="pm" aria-hidden="true"></span></summary><p>Very. It’s one of the most common reasons stepfamilies come in, and it’s workable.</p></details><details><summary>In person or online?<span class="pm" aria-hidden="true"></span></summary><p>Either. 941 Kings Rd in Victoria, or secure video anywhere in BC.</p></details></div></div>
-    </div></section><section class="band dark"><div class="wrap b1-close reveal">
-      <h2 class="b-h1">Blending takes time. <span>You don’t have to work it out alone.</span></h2>
-      <div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn light-fill" href={site.bookingUrl}>Book a free consultation <span class="arr">→</span></a><a class="btn ghost" href="/contact#qform">Ask a question</a></div>
-    </div></section>
+      <div class="reveal">
+        <p class="list-label">Together, we can work on:</p>
+        <ul class="checks stagger">
+          <li>Becoming more confident in your role.</li>
+          <li>Setting realistic expectations and healthier boundaries.</li>
+          <li>Communicating with your partner about difficult or sensitive issues.</li>
+          <li>Managing resentment, guilt and other complicated feelings.</li>
+          <li>Strengthening your relationship as a couple.</li>
+          <li>Making decisions about parenting and family life that work for your household.</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <Close text="I offer a free 15-minute consultation where you can tell me a little about your family situation, ask any questions you have and get a sense of whether working together feels right to you. Whether you’re looking for support on your own or as a couple, we can talk about what you’re hoping to change and how counselling might help." />
 </Base>

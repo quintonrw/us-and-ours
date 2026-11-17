@@ -2,41 +2,45 @@
 import Base from '../layouts/Base.astro';
 import { site } from '../site';
 ---
-<Base title="Contact" description="Book a free 15-minute consultation with Rachel Glover, RCC, or send a question. 941 Kings Rd, Victoria, BC.">
-<div class="wrap"><section class="pg-hero contact-hero">
-      <div class="copy">
-        <p class="eyebrow rise" style="--d:.1s">Contact</p>
-        <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Let’s start</span></span><span class="mask acc"><span style="--d:.36s">with a conversation.</span></span></h1>
-        <p class="lede rise" style="--d:.65s">Book a free 15-minute call, or send a quick question. I’ll reply within two working days.</p>
-        <div class="contact-cards rise" style="--d:.8s">
-          <div><span class="k">Book</span><a class="btn" href={site.bookingUrl}>Book a free 15-minute call <span class="arr">→</span></a></div>
-          <div><span class="k">Phone</span><a class="v" href={site.phoneHref}>{site.phone}</a></div>
-          <div><span class="k">Email</span><a class="v" href={`mailto:${site.email}`}>{site.email}</a></div>
-          <div><span class="k">Office</span><span class="v">941 Kings Rd, Victoria, BC</span></div>
-        </div>
+<Base title="Contact" description="Book a free 15-minute consultation with Rachel Glover, RCC, or send a brief message. In-person at 941 Kings Rd, Victoria, BC, or virtual across BC.">
+  <div class="wrap"><section class="pg-hero contact-hero">
+    <div class="copy">
+      <p class="eyebrow rise" style="--d:.1s">Let’s talk</p>
+      <h1 class="b-h1"><span class="mask"><span style="--d:.2s">The first conversation</span></span><span class="mask acc"><span style="--d:.36s">matters.</span></span></h1>
+      <p class="lede rise" style="--d:.65s">If you’re considering counselling, I offer a free 15-minute consultation where you can tell me a little about what’s going on, ask questions and get a sense of whether working together feels right to you.</p>
+      <div class="contact-cards rise" style="--d:.8s">
+        <div><span class="k">Book</span><a class="btn" href={site.bookingUrl}>Book a free 15-minute consultation <span class="arr">→</span></a><span class="hint">In-person in Victoria · Virtual across BC</span></div>
+        <div><span class="k">Phone</span><a class="v" href={site.phoneHref}>{site.phone}</a></div>
+        <div><span class="k">Email</span><a class="v" href={`mailto:${site.email}`}>{site.email}</a></div>
+        <div><span class="k">Office</span><span class="v">941 Kings Rd, Victoria, BC V8T 1W7</span></div>
       </div>
-      <form class="qform rise" id="qform" style="--d:.5s" action={site.formEndpoint} method="POST" novalidate>
-        <input type="hidden" name="_subject" value="New question from usandours.com">
-        <h2 class="b-h1">Have a question?</h2>
-        <label for="q-name">Your name</label><input id="q-name" name="name" autocomplete="name" required>
-        <label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required>
-        <label for="q-topic">I’m asking about</label>
-        <select id="q-topic" name="topic"><option>Couples counselling</option><option>Stepfamily support</option><option>Individual counselling</option><option>Something else</option></select>
-        <label for="q-msg">Your question</label><textarea id="q-msg" name="message" rows="4" required></textarea>
-        <p class="fine">Please keep it brief and leave out personal details. This form isn’t monitored for emergencies.</p>
-        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn" type="submit">Send question <span class="arr">→</span></button>
-        <p class="sent" id="q-sent" role="status" hidden></p>
-      </form>
-    </section></div>
-    <section class="band alt"><div class="wrap office">
-      <div class="ph reveal-fade" style="min-height:360px;border-radius:3px"><span class="tag"><b>Map</b> · 941 Kings Rd (static map image on the live site)</span></div>
-      <div class="reveal" style="display:flex;flex-direction:column;gap:18px"><p class="eyebrow">Finding the office</p><h2 class="b-h1 h2">941 Kings Rd, Victoria</h2><p class="body">In-person sessions are held here. Secure video sessions are available anywhere in BC.</p></div>
-    </div></section>
-    <section class="band"><div class="wrap crisis-box reveal">
-      <svg viewBox="0 0 116 80" aria-hidden="true"><use href="#markB"/></svg>
-      <div><h2 class="b-h1">If you’re in crisis</h2><p class="body">Counselling isn’t an emergency service. If you or someone you love is in danger, call 9-1-1. For immediate support, call or text 9-8-8, the Suicide Crisis Helpline, any time.</p></div>
-    </div></section>
-</Base>
+    </div>
+    <form class="qform rise" id="qform" style="--d:.5s" action={site.formEndpoint} method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New message from usandours.com" />
+      <h2 class="b-h1">Or send a message</h2>
+      <label for="q-name">Name</label><input id="q-name" name="name" autocomplete="name" required />
+      <label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required />
+      <label for="q-phone">Phone <span class="opt">(optional)</span></label><input id="q-phone" name="phone" type="tel" autocomplete="tel" />
+      <fieldset><legend>I’m interested in</legend><div class="opts">
+        <label><input type="radio" name="interest" value="Couples" checked /> Couples</label>
+        <label><input type="radio" name="interest" value="Stepparent & Stepfamily" /> Stepparent &amp; Stepfamily</label>
+        <label><input type="radio" name="interest" value="Individual" /> Individual</label>
+      </div></fieldset>
+      <fieldset><legend>Preferred session type</legend><div class="opts">
+        <label><input type="radio" name="session_type" value="In-person" checked /> In-person</label>
+        <label><input type="radio" name="session_type" value="Virtual" /> Virtual</label>
+      </div></fieldset>
+      <label for="q-msg">Brief message <span class="opt">(optional)</span></label><textarea id="q-msg" name="message" rows="4"></textarea>
+      <p class="fine">Please keep this message brief and avoid sharing sensitive personal or health information. Email isn’t a fully secure way to send confidential details. We can talk about what’s going on during your consultation. See the <a href="/privacy">privacy policy</a> for how your information is handled.</p>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button class="btn" type="submit">Send message <span class="arr">→</span></button>
+      <p class="sent" id="q-sent" role="status" hidden></p>
+    </form>
+  </section></div>
 
+  <section class="band"><div class="wrap crisis-box reveal">
+    <svg viewBox="0 0 116 80" aria-hidden="true"><use href="#markB" /></svg>
+    <div><h2 class="b-h1">If you’re in crisis</h2><p class="body">Counselling isn’t an emergency service. If you or someone you love is in danger, call 9-1-1. For immediate support, call or text 9-8-8, the Suicide Crisis Helpline, any time.</p></div>
+  </div></section>
+</Base>
 <script src="../scripts/contact.ts"></script>

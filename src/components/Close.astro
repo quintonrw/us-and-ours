@@ -1,0 +1,17 @@
+---
+// Closing call to action used at the foot of each page.
+import { site } from '../site';
+interface Props { text?: string }
+const { text = 'I offer a free 15-minute consultation where you can tell me a little about what’s going on, ask questions and get a sense of whether working together feels right to you.' } = Astro.props;
+---
+<section class="band dark"><div class="wrap b1-close reveal">
+  <p class="eyebrow">Let’s talk</p>
+  <h2 class="b-h1">The first conversation <span>matters.</span></h2>
+  <p class="lede">{text}</p>
+  <slot />
+  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+    <a class="btn light-fill" href={site.bookingUrl}>Book a free 15-minute consultation <span class="arr">→</span></a>
+    <a class="btn ghost" href="/contact#qform">Ask a question</a>
+  </div>
+  <p class="where-line">In-person in Victoria · Virtual across BC</p>
+</div></section>

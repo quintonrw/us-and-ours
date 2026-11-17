@@ -1,26 +1,34 @@
 ---
 import Base from '../layouts/Base.astro';
+import Forms from '../components/Forms.astro';
+import Close from '../components/Close.astro';
 import { site } from '../site';
 ---
-<Base title="Individual counselling" description="Individual counselling focused on relationship patterns, in Victoria, BC and across BC with Rachel Glover, RCC.">
-<div class="wrap"><section class="pg-hero">
-      <div class="copy">
-        <p class="eyebrow rise" style="--d:.1s">Individual counselling</p>
-        <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Understand</span></span><span class="mask acc"><span style="--d:.36s">your patterns.</span></span></h1>
-        <p class="lede rise" style="--d:.65s">The patterns we carry show up in every relationship. One-to-one counselling is space to understand yours, and to change the ones that aren’t working for you.</p>
-        <div class="rise" style="--d:.8s;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href={site.bookingUrl}>Book a free 15-minute call <span class="arr">→</span></a></div>
+<Base title="Individual counselling" description="Individual counselling in Victoria, BC and virtual across BC with Rachel Glover, RCC. Better understand yourself and the relationships in your life.">
+  <div class="wrap"><section class="pg-hero">
+    <div class="copy">
+      <p class="eyebrow rise" style="--d:.1s">Individual counselling</p>
+      <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Change starts</span></span><span class="mask acc"><span style="--d:.36s">with you.</span></span></h1>
+      <div class="stack rise" style="--d:.65s">
+        <p class="lede ink">Sometimes the only person you can change is yourself.</p>
+        <p class="lede">You might be struggling in a relationship, finding it difficult to set boundaries, dealing with complicated family dynamics or facing a major life change.</p>
+        <p class="lede">Perhaps you keep finding yourself in the same situations, having the same reactions or putting everyone else’s needs ahead of your own.</p>
+        <p class="lede">Individual counselling can help you better understand yourself, recognize what’s keeping you stuck and make changes that carry into your everyday life.</p>
       </div>
-      <svg class="pg-forms" viewBox="0 0 116 80" aria-hidden="true"><g class="r"><circle cx="58" cy="40" r="35.3" fill="none" stroke="#5C1A26" stroke-width="1.4"/></g>
-        <g class="mid"><circle cx="58" cy="40" r="21" fill="#CDB792"/></g></svg>
-    </section></div><section class="band"><div class="wrap split2">
-      <div class="reveal"><p class="eyebrow">What we might work on</p><h2 class="b-h1 h2">People see me on their own for…</h2></div>
-      <div class="reveal"><ul class="checks stagger"><li>Relationship patterns that keep repeating, with partners, family or friends.</li><li>Thinking about a relationship: whether to stay, how to leave, or how to start again.</li><li>Setting boundaries without guilt.</li><li>Big transitions, like separation, a new family, or a move.</li><li>Wanting to show up differently for the people you love.</li></ul></div>
-    </div></section><section class="band alt"><div class="wrap split2">
-      <div class="reveal"><p class="eyebrow">Sessions</p><h2 class="b-h1 h2">Sixty minutes, at your pace.</h2></div>
-      <div class="reveal" style="display:flex;flex-direction:column;gap:24px"><p class="body">We’ll start by talking about what’s brought you in and what you’d like to be different. From there, sessions are practical: we look at what’s happening, why, and what you can try. If it would help, a partner can join later.</p>
-      <ul class="fee-list"><li><span class="what">Individual session</span><span class="len">60 min</span><span class="amt">$140</span></li></ul></div>
-    </div></section><section class="band dark"><div class="wrap b1-close reveal">
-      <h2 class="b-h1">Start with a conversation. <span>The first 15 minutes are free.</span></h2>
-      <div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn light-fill" href={site.bookingUrl}>Book a free consultation <span class="arr">→</span></a><a class="btn ghost" href="/contact#qform">Ask a question</a></div>
-    </div></section>
+      <div class="rise" style="--d:.8s;display:flex;gap:14px 20px;flex-wrap:wrap;align-items:center"><a class="btn" href={site.bookingUrl}>Book a free 15-minute consultation <span class="arr">→</span></a><span class="where-line">In-person in Victoria · Virtual across BC</span></div>
+    </div>
+    <Forms kind="one" />
+  </section></div>
+
+  <section class="band alt"><div class="wrap split2">
+    <div class="reveal"><h2 class="b-h1 h2">You can’t control everything. <span class="acc">But you have more influence than you might think.</span></h2></div>
+    <div class="reveal stack">
+      <p class="body">We can’t always change the people around us or the circumstances we find ourselves in. But we can learn to understand our own reactions, communicate our needs, set boundaries and make different choices.</p>
+      <p class="body">Sometimes changing how you respond, what you accept or what you ask for can change the way a relationship works, even when the other person isn’t in counselling.</p>
+      <p class="body">Together, we’ll look at what’s happening in your life, what is and isn’t within your control, and where you can begin making changes that matter to you.</p>
+      <ul class="fee-list" style="margin-top:12px"><li><span class="what">Individual session</span><span class="len">60 min</span><span class="amt">$140</span></li></ul>
+    </div>
+  </div></section>
+
+  <Close />
 </Base>

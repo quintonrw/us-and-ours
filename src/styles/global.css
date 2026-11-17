@@ -363,3 +363,4 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .svc,.areas,.approach{grid-template-columns:1fr}
   .svc-forms{display:none}
 }
+.legal-body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:8px}.legal-body li{font-size:17px;line-height:1.65;color:var(--muted)}

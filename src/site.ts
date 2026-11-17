@@ -4,7 +4,7 @@ export const site = {
   phone: '236-638-7701',
   phoneHref: 'tel:+12366387701',
   email: 'hello@usandours.com',
-  address: '941 Kings Rd, Victoria, BC',
+  address: '941 Kings Rd, Victoria, BC V8T 1W7',
   // Replace with Rachel's Jane booking link once confirmed. Until then, buttons go to /contact.
   bookingUrl: '/contact',
   // Formspree form endpoint, e.g. https://formspree.io/f/abcdwxyz

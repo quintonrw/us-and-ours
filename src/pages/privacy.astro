@@ -2,18 +2,49 @@
 import Base from '../layouts/Base.astro';
 import { site } from '../site';
 ---
-<Base title="Privacy" description="How Us & Ours Counselling collects, uses and protects personal information shared through this website.">
+<Base title="Privacy policy" description="How Us & Ours Counselling collects, uses and protects personal information, and the confidentiality obligations that apply to counselling.">
 <div class="wrap"><section class="legal">
-      <p class="eyebrow rise" style="--d:.1s">Privacy</p>
-      <h1 class="b-h1 rise" style="--d:.2s">Privacy policy</h1>
-      <p class="draft rise" style="--d:.3s">Draft for Rachel to review before launch.</p>
-      <div class="legal-body rise" style="--d:.4s">
-        <h2>What this covers</h2><p>This policy explains how Us &amp; Ours Counselling collects and uses personal information through this website. Information shared in counselling sessions is covered separately by the professional and confidentiality standards of the BC Association of Clinical Counsellors.</p>
-        <h2>What I collect</h2><p>If you use the question form, I collect your name, email address, phone number if you give it, the service you’re interested in, your preferred session type and your message. If you book online, the booking system collects the details it asks for. This site doesn’t use advertising trackers.</p>
-        <h2>How I use it</h2><p>Only to reply to you and arrange sessions. I don’t sell or share your information, and I don’t add you to mailing lists.</p>
-        <h2>How it’s stored</h2><p>Form messages are delivered by a secure email service and kept in my practice email. Booking details are stored by the booking provider.</p>
-        <h2>Your rights</h2><p>Under BC’s Personal Information Protection Act you can ask to see or correct the personal information I hold about you. Email hello@usandours.com.</p>
-        <h2>Contact</h2><p>Rachel Glover, RCC · 941 Kings Rd, Victoria, BC · hello@usandours.com</p>
-      </div>
-    </section></div>
+  <p class="eyebrow rise" style="--d:.1s">Privacy</p>
+  <h1 class="b-h1 rise" style="--d:.2s">Privacy policy</h1>
+  <p class="draft rise" style="--d:.3s">Draft for Rachel to review before launch. Not legal advice.</p>
+  <div class="legal-body rise" style="--d:.4s">
+    <h2>Who I am</h2>
+    <p>Us &amp; Ours Counselling is the counselling practice of Rachel Glover, Registered Clinical Counsellor (RCC), at {site.address}. This policy explains how I handle personal information collected through this website and in the course of counselling.</p>
+
+    <h2>My professional obligations</h2>
+    <p>As a Registered Clinical Counsellor with the BC Association of Clinical Counsellors (BCACC), I follow the BCACC Code of Ethical Conduct and Standards of Clinical Practice. As a private practice in British Columbia, I also follow the Personal Information Protection Act (PIPA).</p>
+    <p>Before counselling begins, I’ll go over what information I collect, how it is used, stored and eventually destroyed, and the limits of confidentiality. You’ll be asked to sign an informed consent form, and you’ll receive a copy.</p>
+
+    <h2>Information collected through this website</h2>
+    <p>If you use the contact form, I receive your full name, email address, phone number (if you give it), the service you’re interested in, your session preference and any message you write. I use this only to reply to you and arrange a consultation. I don’t sell or share it, and I don’t add you to mailing lists.</p>
+    <p>Form messages are delivered by a third-party form service to my practice email. Online booking, if you use it, is handled by the booking provider, which collects the details its form asks for under its own privacy policy.</p>
+
+    <h2>Please keep website messages brief</h2>
+    <p>Email and website forms are not a fully secure way to send confidential information. Please don’t include sensitive personal or health details in the contact form or in email. We can talk about what’s going on during your consultation.</p>
+
+    <h2>Cookies, analytics and other websites</h2>
+    <p>This site doesn’t use advertising or tracking cookies, and it doesn’t use analytics. Fonts are loaded from Google Fonts, which may record your IP address as part of delivering them. Links to other websites are governed by those sites’ own privacy policies.</p>
+
+    <h2>Confidentiality in counselling</h2>
+    <p>What you share in counselling is confidential. I won’t share it without your written consent, except where the law or my professional obligations require it. These limits include:</p>
+    <ul>
+      <li>When there is a risk of serious harm to you or someone else.</li>
+      <li>When I have reason to believe a child or vulnerable adult is being abused or neglected.</li>
+      <li>When records are ordered by a court or otherwise required by law.</li>
+      <li>Clinical consultation with other professionals, without identifying you.</li>
+    </ul>
+    <p>In couples counselling, the relationship is the client. I’ll explain at the start how I handle information one partner shares with me individually.</p>
+
+    <h2>How records are kept</h2>
+    <p>Counselling records are stored securely and kept for the length of time required by BCACC standards and BC law, then destroyed securely.</p>
+
+    <h2>Your rights</h2>
+    <p>Under PIPA you can ask to see the personal information I hold about you, ask me to correct it, and withdraw consent for its use, subject to legal and professional limits. Email <a class="textlink" href={`mailto:${site.email}`}>{site.email}</a> to make a request.</p>
+
+    <h2>Questions or concerns</h2>
+    <p>Please contact me first at <a class="textlink" href={`mailto:${site.email}`}>{site.email}</a> or {site.phone}. If we can’t resolve a privacy concern, you can contact the Office of the Information and Privacy Commissioner for British Columbia. Concerns about professional conduct can be raised with the BC Association of Clinical Counsellors.</p>
+
+    <p><em>Last updated: November 2026.</em></p>
+  </div>
+</section></div>
 </Base>

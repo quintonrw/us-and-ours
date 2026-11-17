@@ -18,17 +18,17 @@ import { site } from '../site';
     <form class="qform rise" id="qform" style="--d:.5s" action={site.formEndpoint} method="POST" novalidate>
       <input type="hidden" name="_subject" value="New message from usandours.com" />
       <h2 class="b-h1">Or send a message</h2>
-      <label for="q-name">Name</label><input id="q-name" name="name" autocomplete="name" required />
+      <label for="q-name">Full name</label><input id="q-name" name="name" autocomplete="name" required />
       <label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required />
       <label for="q-phone">Phone <span class="opt">(optional)</span></label><input id="q-phone" name="phone" type="tel" autocomplete="tel" />
-      <fieldset><legend>I’m interested in</legend><div class="opts">
-        <label><input type="radio" name="interest" value="Couples" checked /> Couples</label>
-        <label><input type="radio" name="interest" value="Stepparent & Stepfamily" /> Stepparent &amp; Stepfamily</label>
-        <label><input type="radio" name="interest" value="Individual" /> Individual</label>
+      <fieldset><legend>What are you interested in?</legend><div class="opts">
+        <label><input type="radio" name="interest" value="Couples counselling" checked /> Couples counselling</label>
+        <label><input type="radio" name="interest" value="Stepparent support" /> Stepparent support</label>
+        <label><input type="radio" name="interest" value="Individual counselling" /> Individual counselling</label>
       </div></fieldset>
-      <fieldset><legend>Preferred session type</legend><div class="opts">
-        <label><input type="radio" name="session_type" value="In-person" checked /> In-person</label>
-        <label><input type="radio" name="session_type" value="Virtual" /> Virtual</label>
+      <fieldset><legend>Session preference</legend><div class="opts">
+        <label><input type="radio" name="session_type" value="In-person in Victoria" checked /> In-person in Victoria</label>
+        <label><input type="radio" name="session_type" value="Virtual across BC" /> Virtual across BC</label>
       </div></fieldset>
       <label for="q-msg">Brief message <span class="opt">(optional)</span></label><textarea id="q-msg" name="message" rows="4"></textarea>
       <p class="fine">Please keep this message brief and avoid sharing sensitive personal or health information. Email isn’t a fully secure way to send confidential details. We can talk about what’s going on during your consultation. See the <a href="/privacy">privacy policy</a> for how your information is handled.</p>

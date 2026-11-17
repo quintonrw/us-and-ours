@@ -373,3 +373,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .b1-cards.weighted .feature .ic{width:84px;height:58px;margin-bottom:auto}
 .b1-card .tag{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--onDark)}
 @media (max-width:860px){.b1-cards.weighted{grid-template-columns:1fr}.b1-cards.weighted .feature{grid-row:auto}.b1-cards.weighted .feature .ic{margin-bottom:12px}}
+/* dark sections in Oxblood (burgundy) instead of Dark Roast */
+.band.dark,.b1-about .txt,.site-foot,.b1-cards.weighted .feature{background:var(--b-oxblood)}
+.site-foot .btn{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.dark .btn.light-fill:hover,.site-foot .btn:hover{background:var(--alt);border-color:var(--alt);color:var(--ink)}

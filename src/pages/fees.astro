@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+---
+<Base title="Fees" description="Session fees for couples, stepfamily and individual counselling with Rachel Glover, RCC. Free 15-minute consultation.">
+<div class="wrap"><section class="pg-hero">
+      <div class="copy">
+        <p class="eyebrow rise" style="--d:.1s">Fees &amp; sessions</p>
+        <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Clear fees,</span></span><span class="mask acc"><span style="--d:.36s">set out up front.</span></span></h1>
+        <p class="lede rise" style="--d:.65s">Every new client starts with a free 15-minute call, so you can ask questions and see whether I’m the right fit before booking.</p>
+        <div class="rise" style="--d:.8s;display:flex;gap:14px;flex-wrap:wrap"><a class="btn" href={site.bookingUrl}>Book a free 15-minute call <span class="arr">→</span></a></div>
+      </div>
+      <svg class="pg-forms" viewBox="0 0 116 80" aria-hidden="true"><g class="l"><circle cx="40" cy="40" r="36" fill="#CDB792"/></g>
+        <circle class="mid" cx="76" cy="40" r="36" clip-path="url(#clipB)" fill="#5C1A26"/>
+        <g class="r"><circle cx="76" cy="40" r="35.3" fill="none" stroke="#5C1A26" stroke-width="1.4"/></g></svg>
+    </section></div><section class="band alt"><div class="wrap a1-fees">
+      <div class="reveal"><p class="eyebrow">Session fees</p><h2 class="b-h1 h2" style="margin-top:16px">Couples and individual sessions</h2><p class="body" style="margin-top:20px">Stepfamily sessions use the couples or individual rate, depending on who attends.</p></div>
+      <ul class="fee-list stagger"><li><span class="what">Free consultation</span><span class="len">15 min</span><span class="amt">$0</span></li><li><span class="what">Couples session</span><span class="len">60 min</span><span class="amt">$180</span></li>
+<li><span class="what">Couples session <span class="rec">Recommended</span></span><span class="len">75 min</span><span class="amt">$225</span></li>
+<li><span class="what">Couples session</span><span class="len">90 min</span><span class="amt">$270</span></li>
+<li><span class="what">Individual session</span><span class="len">60 min</span><span class="amt">$140</span></li></ul>
+    </div></section><section class="band"><div class="wrap split2">
+      <div class="reveal"><p class="eyebrow">Good to know</p><h2 class="b-h1 h2">Where and how</h2></div>
+      <div class="reveal"><ul class="checks stagger"><li>In person at 941 Kings Rd, Victoria, or by secure video anywhere in BC.</li><li>The free consultation is by phone or video.</li><li>Fees shown are per session.</li></ul></div>
+    </div></section><section class="band dark"><div class="wrap b1-close reveal">
+      <h2 class="b-h1">Questions about fees? <span>Ask me anything.</span></h2>
+      <div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn light-fill" href={site.bookingUrl}>Book a free consultation <span class="arr">→</span></a><a class="btn ghost" href="/contact#qform">Ask a question</a></div>
+    </div></section>
+</Base>

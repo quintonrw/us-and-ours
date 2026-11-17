@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+import Sprite from '../components/Sprite.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+interface Props { title: string; description: string }
+const { title, description } = Astro.props;
+const fullTitle = title === 'Home' ? 'Us & Ours Counselling · Couples & relationship counselling, Victoria BC' : `${title} · Us & Ours Counselling`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#F7F3EA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Us & Ours Counselling" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/img/og.jpg', Astro.site)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Red+Hat+Display:wght@300;400&display=swap" />
+  </head>
+  <body class="dir-b">
+    <a class="skip" href="#main">Skip to content</a>
+    <Sprite />
+    <Header />
+    <main id="main" class="page">
+      <slot />
+    </main>
+    <Footer />
+    <script src="../scripts/site.ts"></script>
+  </body>
+</html>

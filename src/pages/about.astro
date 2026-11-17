@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+---
+<Base title="About Rachel" description="Rachel Glover is a Registered Clinical Counsellor in Victoria, BC, working with couples, stepfamilies and individuals.">
+<div class="wrap"><section class="pg-hero about-hero">
+      <div class="copy">
+        <p class="eyebrow rise" style="--d:.1s">About Rachel</p>
+        <h1 class="b-h1"><span class="mask"><span style="--d:.2s">Warm, direct,</span></span><span class="mask acc"><span style="--d:.36s">and on your side.</span></span></h1>
+        <p class="lede rise" style="--d:.65s">I’m Rachel Glover, a Registered Clinical Counsellor in Victoria, BC. I work with couples, stepfamilies and individuals on the relationships that matter most to them.</p>
+      </div>
+      <div class="photo about-photo slide-up rise" style="--d:.3s"><img src="/img/rachel-brick.jpg" alt="Rachel Glover, RCC, smiling, leaning against a brick wall" style="object-position:50% 6%"></div>
+    </section></div><section class="band alt"><div class="wrap split2">
+      <div class="reveal"><p class="eyebrow">My approach</p><h2 class="b-h1 h2">How I work with people</h2></div>
+      <div class="reveal"><div style="display:flex;flex-direction:column;gap:18px"><p class="body">Most of us were never taught how to do relationships well. We learn from what we grew up with, and then we try our best. When that stops working, it isn’t a failure. It’s a sign something needs attention.</p>
+    <p class="body">In sessions I’m warm, and I’m direct. I’ll tell you what I’m noticing, help you see it from a different angle, and give you practical things to try. I don’t take sides in couples work: the relationship is the client.</p></div></div>
+    </div></section><section class="band"><div class="wrap">
+      <div class="reveal"><p class="eyebrow">What to expect from me</p></div>
+      <div class="b1-steps stagger">
+        <div class="b1-step"><span class="n">WARM</span><h3>You’ll feel at ease</h3><p class="body">A calm, private room, or a video call from wherever you’re comfortable.</p></div>
+        <div class="b1-step"><span class="n">DIRECT</span><h3>I’ll be honest</h3><p class="body">I’ll name patterns kindly and clearly, so we don’t spend sessions circling.</p></div>
+        <div class="b1-step"><span class="n">PRACTICAL</span><h3>You’ll leave with something</h3><p class="body">Each session ends with something to try before we meet again.</p></div>
+      </div>
+    </div></section>
+    <section class="band alt"><div class="wrap split2">
+      <div class="reveal"><p class="eyebrow">Credentials</p><h2 class="b-h1 h2">Training and registration</h2></div>
+      <div class="reveal"><ul class="creds">
+        <li><span>Registered Clinical Counsellor (RCC)</span><span>BC Association of Clinical Counsellors</span></li>
+        <li><span>Registration number</span><span class="todo">To confirm with Rachel</span></li>
+        <li><span>Education</span><span class="todo">To confirm with Rachel</span></li>
+        <li><span>Additional training</span><span class="todo">To confirm with Rachel</span></li>
+      </ul></div>
+    </div></section>
+    <section class="band"><div class="wrap office">
+      <div class="ph reveal-fade" style="min-height:440px;border-radius:3px"><span class="tag"><b>Real photo</b> · The Kings Rd counselling room</span></div>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:18px"><p class="eyebrow">The office</p><h2 class="b-h1 h2">941 Kings Rd, Victoria</h2><p class="body">A quiet, private room for in-person sessions. Prefer to stay home? Secure video sessions are available anywhere in BC.</p><div><a class="textlink" href="/contact">Directions and contact</a></div></div>
+    </div></section><section class="band dark"><div class="wrap b1-close reveal">
+      <h2 class="b-h1">Let’s see if we’re a fit. <span>The first call is free.</span></h2>
+      <div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn light-fill" href={site.bookingUrl}>Book a free consultation <span class="arr">→</span></a><a class="btn ghost" href="/contact#qform">Ask a question</a></div>
+    </div></section>
+</Base>

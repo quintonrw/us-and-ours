@@ -1,0 +1,15 @@
+---
+import { site } from '../site';
+const year = new Date().getFullYear();
+---
+<footer class="site-foot"><div class="wrap">
+  <div class="cols">
+    <div class="brand"><a class="logo logo-b" href="/" aria-label="Us & Ours Counselling, home"><svg width="56" height="38" aria-hidden="true"><use href="#markB-dark" /></svg><span class="wm"><b>US &amp; OURS</b><small>Couples &amp; relationship counselling</small></span></a>
+      <p>Rachel Glover, RCC<br />{site.address}<br />Secure video across BC</p></div>
+    <div><h3>Counselling</h3><a href="/couples">Couples</a><a href="/stepfamilies">Stepfamilies</a><a href="/individuals">Individuals</a></div>
+    <div><h3>Practice</h3><a href="/about">About Rachel</a><a href="/fees">Fees</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a></div>
+    <div><h3>Get in touch</h3><a href={site.phoneHref}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a><a class="btn light-fill" href={site.bookingUrl}>Free consultation <span class="arr">→</span></a></div>
+  </div>
+  <p class="ack">I live and work on the traditional territories of the Lekwungen-speaking peoples, the Songhees and Esquimalt Nations. <b>In crisis? Call or text 9-8-8 any time.</b></p>
+  <p class="legal-line">© {year} Us &amp; Ours Counselling · <a href="/privacy">Privacy</a></p>
+</div></footer>

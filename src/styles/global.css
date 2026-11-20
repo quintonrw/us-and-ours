@@ -266,7 +266,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .contact-hero{align-items:start}
 .contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule)}
 .contact-cards>div{display:flex;flex-direction:column;gap:8px;padding:20px 20px 20px 0;border-bottom:1px solid var(--rule)}
-.contact-cards>div:first-child{grid-column:1/-1;align-items:flex-start}
+.contact-cards>div:last-child{grid-column:1/-1}
 .contact-cards .k{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .contact-cards .v{font-size:17px;color:var(--ink);user-select:all}
 .contact-cards .hint{font-size:13px;color:var(--muted)}

@@ -423,3 +423,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ic-signal .end{animation:ic-lit 5s var(--ease) infinite}
 @media (prefers-reduced-motion: reduce){.ic-signal .p1,.ic-signal .p2{display:none}.ic-signal .end{opacity:1}}
 .band.dark.close-band{background:var(--b-roast)}
+.close-band{padding-block:clamp(56px,7vw,96px)}
+.close-band .b1-close{gap:24px}
+.close-band .b1-close h2{font-size:clamp(38px,5vw,72px);color:var(--onDark)}
+.close-band .b1-close h2 span{color:var(--bg)}

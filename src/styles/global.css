@@ -380,3 +380,21 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* checklist bullets: smaller burgundy ring with a centred burgundy dot */
 .checks li{grid-template-columns:20px 1fr}
 .checks li::before{width:13px;height:13px;margin-top:6px;border:1.4px solid var(--accent);background:radial-gradient(circle at 50% 50%,var(--accent) 0 2.6px,transparent 3px)}
+
+/* Couples "What can we work on?" icons: loop gently while on screen */
+.areas .ic{width:76px;height:76px;overflow:visible;margin:-10px 0 -6px -10px}
+.areas .ic *{animation-play-state:paused}
+.areas.live .ic *{animation-play-state:running}
+@keyframes ic-say{0%,5%{opacity:0;transform:scale(.7)}15%,35%{opacity:1;transform:none}45%,100%{opacity:0}}
+.ic-talk .sp{transform-box:view-box;opacity:0;animation:ic-say 6s var(--ease) infinite}
+.ic-talk .l1,.ic-talk .l2{transform-origin:16px 32px}.ic-talk .l2{animation-delay:.25s}
+.ic-talk .r1,.ic-talk .r2{transform-origin:48px 32px}.ic-talk .r1{animation-delay:3s}.ic-talk .r2{animation-delay:3.25s}
+@keyframes ic-glow{0%{transform:scale(.5);opacity:0}30%{opacity:.7}100%{transform:scale(1.5);opacity:0}}
+.ic-close .g{transform-box:fill-box;transform-origin:center;animation:ic-glow 5s ease-out infinite}
+.ic-close .g2{animation-delay:1.66s}.ic-close .g3{animation-delay:3.33s}
+@keyframes ic-tip{0%,10%{transform:rotate(-12deg)}45%,85%{transform:rotate(0)}100%{transform:rotate(-12deg)}}
+@keyframes ic-shift{0%,10%{transform:translateX(-5px)}45%,85%{transform:none}100%{transform:translateX(-5px)}}
+.ic-life .beam{transform-origin:32px 40px;animation:ic-tip 7s var(--ease) infinite}.ic-life .sh{animation:ic-shift 7s var(--ease) infinite}
+@keyframes ic-echo{0%,10%{opacity:1}35%,90%{opacity:0}100%{opacity:1}}
+.ic-pattern .e{animation:ic-echo 7s var(--ease) infinite}.ic-pattern .e2{animation-delay:.5s}.ic-pattern .e3{animation-delay:1s}
+@media (prefers-reduced-motion: reduce){.areas .ic *{animation:none!important}.ic-talk .sp{opacity:1}}

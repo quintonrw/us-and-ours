@@ -33,3 +33,10 @@ if ('IntersectionObserver' in window && !calm) {
     io.observe(t.parentElement);
   });
 }
+
+// Couples topic icons: only animate while the section is on screen.
+const areas = document.querySelectorAll<HTMLElement>('.areas');
+if (areas.length && 'IntersectionObserver' in window) {
+  const live = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle('live', e.isIntersecting)), { threshold: 0.15 });
+  areas.forEach((a) => live.observe(a));
+} else areas.forEach((a) => a.classList.add('live'));

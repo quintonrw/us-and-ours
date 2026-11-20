@@ -7,7 +7,7 @@ const cur = (href: string) => (path === href ? 'page' : undefined);
   <div class="wrap"><nav class="site-nav" aria-label="Main">
     <a class="logo logo-b" href="/" aria-label="Us & Ours Counselling, home"><svg width="56" height="38" aria-hidden="true"><use href="#markB" /></svg><span class="wm"><b>US &amp; OURS</b><small>Couples &amp; relationship counselling</small></span></a>
     <ul>{nav.map((n) => <li><a href={n.href} aria-current={cur(n.href)}>{n.label}</a></li>)}</ul>
-    <a class="nav-cta" href={site.bookingUrl}>Free consultation</a>
+    <a class="nav-cta" href={site.bookingUrl}>Book Consultation</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span class="sr">Menu</span></button>
   </nav></div>
   <div class="mnav" id="mnav" hidden><div class="wrap">

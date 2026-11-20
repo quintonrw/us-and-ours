@@ -427,3 +427,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .btn-row{display:grid;width:fit-content;max-width:100%;grid-template-columns:1fr;gap:12px}
   .btn-row .btn,.btn-row .mask .btn{width:100%;justify-content:center}
 }
+
+@keyframes cardUp{from{opacity:0;transform:translateY(56px)}to{opacity:1;transform:none}}
+.card-up{animation:cardUp 1.2s var(--ease) both;animation-delay:var(--d,0s)}
+.armed .card-up{animation-play-state:paused}

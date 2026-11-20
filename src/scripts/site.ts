@@ -100,7 +100,10 @@ if (!calm) {
   }), { threshold: 0.2 }) : null;
   blocks.forEach((b) => {
     const items: Element[] = [];
-    maskItems(b, items);
+    if (b.matches('.b1-cards')) {
+      // Cards rise in whole, one after another.
+      Array.from(b.children).forEach((card, i) => { card.classList.add('card-up'); (card as HTMLElement).style.setProperty('--d', `${i * 0.14}s`); });
+    } else maskItems(b, items);
     items.forEach((it, i) => wrapMask(it, Math.min(i * 0.08, 0.64)));
     if (rio && b.getBoundingClientRect().top > innerHeight * 0.9) { b.classList.add('armed'); rio.observe(b); }
   });

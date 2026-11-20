@@ -40,3 +40,18 @@ if (areas.length && 'IntersectionObserver' in window) {
   const live = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle('live', e.isIntersecting)), { threshold: 0.15 });
   areas.forEach((a) => live.observe(a));
 } else areas.forEach((a) => a.classList.add('live'));
+
+// Masked slide-up (same motion as the hero) that waits until the block scrolls into view.
+const maskBlocks = document.querySelectorAll<HTMLElement>('.mask-in');
+if ('IntersectionObserver' in window && !calm) {
+  const mio = new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return;
+    mio.unobserve(e.target);
+    e.target.classList.remove('armed');
+  }), { threshold: 0.3 });
+  maskBlocks.forEach((b) => {
+    if (b.getBoundingClientRect().top < innerHeight * 0.85) return;
+    b.classList.add('armed');
+    mio.observe(b);
+  });
+}

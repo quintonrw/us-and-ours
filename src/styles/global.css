@@ -399,3 +399,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @keyframes ic-out{0%,60%{transform:translateX(0);opacity:1}80%,90%{transform:translateX(18px);opacity:1}100%{transform:translateX(18px);opacity:0}}
 .ic-pattern .orbit{transform-origin:28px 32px;animation:ic-orbit 7s var(--ease) infinite}.ic-pattern .dot{animation:ic-out 7s var(--ease) infinite}
 @media (prefers-reduced-motion: reduce){.areas .ic *{animation:none!important}.ic-talk .sp{opacity:1}}
+
+/* Scroll-triggered version of the hero's masked slide-up (Meet Rachel on Home) */
+.mask-in.armed .mask>span{animation-play-state:paused}
+.mask-in .btn{margin-top:4px}

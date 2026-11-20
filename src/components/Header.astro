@@ -13,6 +13,6 @@ const cur = (href: string) => (path === href ? 'page' : undefined);
   <div class="mnav" id="mnav" hidden><div class="wrap">
     {nav.map((n) => <a href={n.href} aria-current={cur(n.href)}>{n.label}</a>)}
     <a href="/contact" aria-current={cur('/contact')}>Contact</a>
-    <a class="btn" href={site.bookingUrl}>Book a free 15-minute call <span class="arr">→</span></a>
+    <a class="btn" href={site.bookingUrl}>Book Consultation <span class="arr">→</span></a>
   </div></div>
 </header>

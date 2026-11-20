@@ -382,9 +382,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .checks li::before{width:13px;height:13px;margin-top:6px;border:1.4px solid var(--accent);background:radial-gradient(circle at 50% 50%,var(--accent) 0 2.6px,transparent 3px)}
 
 /* Couples "What can we work on?" icons: loop gently while on screen */
-.areas .ic{width:76px;height:76px;overflow:visible;margin:-10px 0 -6px -10px}
-.areas .ic *{animation-play-state:paused}
-.areas.live .ic *{animation-play-state:running}
+.areas .ic,.approach .ic{width:76px;height:76px;overflow:visible;margin:-10px 0 -6px -10px}
+.areas .ic *,.approach .ic *{animation-play-state:paused}
+.areas.live .ic *,.approach.live .ic *{animation-play-state:running}
 @keyframes ic-say{0%,5%{opacity:0;transform:scale(.7)}15%,35%{opacity:1;transform:none}45%,100%{opacity:0}}
 .ic-talk .sp{transform-box:view-box;opacity:0;animation:ic-say 6s var(--ease) infinite}
 .ic-talk .l1,.ic-talk .l2{transform-origin:16px 32px}.ic-talk .l2{animation-delay:.25s}
@@ -398,7 +398,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @keyframes ic-orbit{0%{transform:rotate(0)}60%,100%{transform:rotate(360deg)}}
 @keyframes ic-out{0%,60%{transform:translateX(0);opacity:1}80%,90%{transform:translateX(18px);opacity:1}100%{transform:translateX(18px);opacity:0}}
 .ic-pattern .orbit{transform-origin:28px 32px;animation:ic-orbit 7s var(--ease) infinite}.ic-pattern .dot{animation:ic-out 7s var(--ease) infinite}
-@media (prefers-reduced-motion: reduce){.areas .ic *{animation:none!important}.ic-talk .sp{opacity:1}}
+@media (prefers-reduced-motion: reduce){.areas .ic *,.approach .ic *{animation:none!important}.ic-talk .sp{opacity:1}}
 
 /* Scroll-triggered version of the hero's masked slide-up (Meet Rachel on Home) */
 .mask-in.armed .mask>span{animation-play-state:paused}
@@ -408,3 +408,17 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @keyframes growIn{from{transform:scale(.55);opacity:0}to{transform:none;opacity:1}}
 .pg-forms.one .r{animation:growIn 2.2s var(--ease-soft) both .2s}
 .pg-forms.one .mid{animation:growIn 1.8s var(--ease-soft) both .7s}
+
+/* About approach icons */
+@keyframes ic-ring{0%,5%{stroke-dashoffset:1;opacity:1}30%,85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+.ic-grow .rg{stroke-dasharray:1;animation:ic-ring 7s var(--ease) infinite}.ic-grow .rg2{animation-delay:.6s}.ic-grow .rg3{animation-delay:1.2s}
+@keyframes ic-tl{0%,15%{transform:translateX(0)}50%,70%{transform:translateX(-7px)}100%{transform:translateX(0)}}
+@keyframes ic-tr{0%,15%{transform:translateX(0)}50%,70%{transform:translateX(7px)}100%{transform:translateX(0)}}
+@keyframes ic-slack{0%,15%{d:path("M20 32 Q32 44 44 32")}50%,70%{d:path("M13 32 Q32 32 51 32")}100%{d:path("M20 32 Q32 44 44 32")}}
+.ic-tether .a{animation:ic-tl 6s var(--ease) infinite}.ic-tether .b{animation:ic-tr 6s var(--ease) infinite}.ic-tether .teth{animation:ic-slack 6s var(--ease) infinite}
+@keyframes ic-sig{0%{offset-distance:0%;opacity:0}8%{opacity:1}45%{offset-distance:100%;opacity:1}55%,100%{offset-distance:100%;opacity:0}}
+@keyframes ic-lit{0%,40%{opacity:.25}50%,70%{opacity:1}100%{opacity:.25}}
+.ic-signal .p1{offset-path:path("M8 40 L28 32 L50 18");offset-rotate:0deg;animation:ic-sig 5s var(--ease) infinite}
+.ic-signal .p2{offset-path:path("M8 40 L28 32 L52 44");offset-rotate:0deg;animation:ic-sig 5s var(--ease) infinite .25s}
+.ic-signal .end{animation:ic-lit 5s var(--ease) infinite}
+@media (prefers-reduced-motion: reduce){.ic-signal .p1,.ic-signal .p2{display:none}.ic-signal .end{opacity:1}}

@@ -124,15 +124,9 @@ h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
 .draw{stroke-dasharray:1;animation:draw 2s var(--ease-soft) both;animation-delay:var(--d,0s)}
 .bloom{transform-box:fill-box;transform-origin:center;animation:bloom 1.4s var(--ease) both;animation-delay:var(--d,0s)}
 
-/* Scroll reveals: CSS scroll-driven, no JS state. Unsupported browsers simply show the content. */
-@supports (animation-timeline: view()){
-  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
-  .reveal-fade{animation:fade linear both;animation-timeline:view();animation-range:entry 10% cover 35%}
-  .stagger>*{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
-  .stagger>*:nth-child(2){animation-range:entry 8% entry 68%}
-  .stagger>*:nth-child(3){animation-range:entry 16% entry 76%}
-  .stagger>*:nth-child(4){animation-range:entry 24% entry 84%}
-}
+/* Scroll reveals: site.ts wraps text in .mask lines (the hero's motion) and plays them when each block scrolls into view. */
+.armed .mask>span,.armed .mk-fade{animation-play-state:paused}
+.mk-fade{animation:fade 1.2s var(--ease-soft) both;animation-delay:var(--d,0s)}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
@@ -190,7 +184,7 @@ h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
 .b1-step h3{font-family:var(--display);font-size:26px}
 .b1-close{display:flex;flex-direction:column;align-items:flex-start;gap:30px}
 .b1-close h2{font-size:clamp(44px,6.6vw,96px)}
-.b1-close h2 span{color:var(--onDark)}
+.b1-close h2 span:not(.ml){color:var(--onDark)}
 @media (max-width:860px){
   .b1-hero,.b1-about{grid-template-columns:1fr}
   .b1-forms{max-width:320px;justify-self:start;order:-1}
@@ -322,7 +316,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .b1-close .lede{max-width:36em}
 .stack{display:flex;flex-direction:column;gap:18px}
 .dark .body{color:color-mix(in srgb,var(--bg) 78%,transparent)}
-.dark .h2 span,.dark h2 .soft{color:var(--onDark)}
+.dark .h2 span:not(.ml),.dark h2 .soft{color:var(--onDark)}
 .strong{color:var(--ink);font-weight:500}
 .dark .strong{color:var(--bg)}
 .pull{font-family:var(--display);font-weight:300;font-size:clamp(26px,2.8vw,36px);line-height:1.3;color:var(--accent);letter-spacing:-.01em}
@@ -401,7 +395,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (prefers-reduced-motion: reduce){.areas .ic *,.approach .ic *{animation:none!important}.ic-talk .sp{opacity:1}}
 
 /* Scroll-triggered version of the hero's masked slide-up (Meet Rachel on Home) */
-.mask-in.armed .mask>span{animation-play-state:paused}
 .mask-in .btn{margin-top:4px}
 
 /* Individual hero: the ring and the solid form open out from the centre */
@@ -426,4 +419,4 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .close-band{padding-block:clamp(56px,7vw,96px)}
 .close-band .b1-close{gap:24px}
 .close-band .b1-close h2{font-size:clamp(34px,4vw,54px);color:var(--onDark)}
-.close-band .b1-close h2 span{color:var(--bg)}
+.close-band .b1-close h2 span:not(.ml){color:var(--bg)}

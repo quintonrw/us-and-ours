@@ -55,3 +55,53 @@ if ('IntersectionObserver' in window && !calm) {
     mio.observe(b);
   });
 }
+
+// Every scroll reveal uses the hero's masked slide-up: text lines rise from behind a mask, one after another.
+function maskItems(root: Element, out: Element[]) {
+  for (const el of Array.from(root.children)) {
+    if (el.matches('img, picture, form, input, textarea, select, .photo, .mask, br')) continue;
+    if (el.matches('svg')) { out.push(el); continue; }
+    if (el.matches('.btn')) { out.push(el); continue; }
+    const d = getComputedStyle(el).display;
+    const container = el.matches('div, ul, ol, section, article, header, figure, blockquote, nav') || ((d === 'grid' || d === 'flex') && el.children.length > 0);
+    if (container) maskItems(el, out); else out.push(el);
+  }
+}
+function wrapMask(el: Element, delay: number) {
+  if (el.matches('svg')) { el.classList.add('mk-fade'); (el as SVGElement).style.setProperty('--d', `${delay}s`); return; }
+  const inner = document.createElement('span');
+  inner.className = 'ml';
+  inner.style.setProperty('--d', `${delay}s`);
+  if (el.matches('.btn')) {
+    const outer = document.createElement('div');
+    outer.className = 'mask';
+    el.replaceWith(outer); outer.append(inner); inner.append(el);
+    return;
+  }
+  el.classList.add('mask');
+  while (el.firstChild) inner.append(el.firstChild);
+  el.append(inner);
+}
+if (!calm) {
+  // Hero entrance: eyebrow, lede and buttons join the headline's masked lines.
+  document.querySelectorAll<HTMLElement>('.eyebrow.rise, .lede.rise, h1.rise, div.rise').forEach((el) => {
+    if (el.matches('.qform, .contact-cards, .photo, .legal-body, .draft')) return;
+    const d = parseFloat(el.style.getPropertyValue('--d')) || 0;
+    el.classList.remove('rise');
+    if (el.matches('div')) { const items: Element[] = []; maskItems(el, items); items.forEach((it, i) => wrapMask(it, d + i * 0.08)); }
+    else wrapMask(el, d);
+  });
+  // Scroll blocks.
+  const blocks = Array.from(document.querySelectorAll<HTMLElement>('.reveal, .stagger')).filter((b) => !b.closest('.mask-in') && !b.parentElement?.closest('.reveal, .stagger'));
+  const rio = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return;
+    rio!.unobserve(e.target);
+    e.target.classList.remove('armed');
+  }), { threshold: 0.2 }) : null;
+  blocks.forEach((b) => {
+    const items: Element[] = [];
+    maskItems(b, items);
+    items.forEach((it, i) => wrapMask(it, Math.min(i * 0.08, 0.64)));
+    if (rio && b.getBoundingClientRect().top > innerHeight * 0.9) { b.classList.add('armed'); rio.observe(b); }
+  });
+}

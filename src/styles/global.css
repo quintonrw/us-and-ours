@@ -422,3 +422,4 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ic-signal .p2{offset-path:path("M8 40 L28 32 L52 44");offset-rotate:0deg;animation:ic-sig 5s var(--ease) infinite .25s}
 .ic-signal .end{animation:ic-lit 5s var(--ease) infinite}
 @media (prefers-reduced-motion: reduce){.ic-signal .p1,.ic-signal .p2{display:none}.ic-signal .end{opacity:1}}
+.band.dark.close-band{background:var(--b-roast)}

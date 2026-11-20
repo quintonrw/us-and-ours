@@ -403,3 +403,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* Scroll-triggered version of the hero's masked slide-up (Meet Rachel on Home) */
 .mask-in.armed .mask>span{animation-play-state:paused}
 .mask-in .btn{margin-top:4px}
+
+/* Individual hero: the ring and the solid form open out from the centre */
+@keyframes growIn{from{transform:scale(.55);opacity:0}to{transform:none;opacity:1}}
+.pg-forms.one .r{animation:growIn 2.2s var(--ease-soft) both .2s}
+.pg-forms.one .mid{animation:growIn 1.8s var(--ease-soft) both .7s}

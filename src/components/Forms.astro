@@ -18,7 +18,7 @@ const { kind = 'two', class: cls = 'pg-forms' } = Astro.props;
   </svg>
 )}
 {kind === 'one' && (
-  <svg class={cls} viewBox="0 0 116 80" aria-hidden="true">
+  <svg class={`${cls} one`} viewBox="0 0 116 80" aria-hidden="true">
     <g class="r"><circle cx="58" cy="40" r="35.3" fill="none" stroke="#5C1A26" stroke-width="1.4" /></g>
     <g class="mid"><circle cx="58" cy="40" r="21" fill="#CDB792" /></g>
   </svg>

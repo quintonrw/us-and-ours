@@ -9,7 +9,7 @@
   --ease-soft: cubic-bezier(.4,.1,.2,1);
 }
 html,body{background:var(--bg,#FAF7F1)}
-body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;transition:background .5s var(--ease-soft)}
+body{margin:0;font-family:var(--body);font-variation-settings:"FLAR" 100;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;transition:background .5s var(--ease-soft)}
 body.dir-a{--bg:var(--a-ivory);--alt:var(--a-linen);--oat:var(--a-oat);--accent:var(--a-wine);--ink:var(--a-espresso);--muted:var(--a-cocoa);--onDark:var(--a-oat);--display:'Gilda Display',Didot,'Bodoni 72',Georgia,serif;--body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--radius-btn:999px;--rule:color-mix(in srgb,var(--a-espresso) 22%,transparent)}
 body.dir-b{--bg:var(--b-ivory);--alt:var(--b-flax);--oat:var(--b-oat);--accent:var(--b-oxblood);--ink:var(--b-roast);--muted:var(--b-taupe);--onDark:var(--b-oat);--display:'Commissioner',system-ui,sans-serif;--body:'Commissioner',system-ui,-apple-system,'Segoe UI',sans-serif;--radius-btn:2px;--rule:color-mix(in srgb,var(--b-roast) 20%,transparent)}
 *,*::before,*::after{box-sizing:border-box}

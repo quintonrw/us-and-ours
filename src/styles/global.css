@@ -420,3 +420,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .close-band .b1-close{gap:24px}
 .close-band .b1-close h2{font-size:clamp(34px,4vw,54px);color:var(--onDark)}
 .close-band .b1-close h2 span:not(.ml){color:var(--bg)}
+
+/* Button pairs: side by side when there is room; stacked at equal width on small screens */
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+@media (max-width:600px){
+  .btn-row{display:grid;width:fit-content;max-width:100%;grid-template-columns:1fr;gap:12px}
+  .btn-row .btn,.btn-row .mask .btn{width:100%;justify-content:center}
+}

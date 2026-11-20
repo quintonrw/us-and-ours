@@ -2,14 +2,21 @@
 const menuBtn = document.getElementById('menuBtn');
 const mnav = document.getElementById('mnav');
 if (menuBtn && mnav) {
-  menuBtn.addEventListener('click', () => {
-    const open = mnav.hidden;
-    mnav.hidden = !open;
+  let t = 0;
+  const setMenu = (open: boolean) => {
+    mnav.classList.toggle('open', open);
+    mnav.setAttribute('aria-hidden', String(!open));
     menuBtn.setAttribute('aria-expanded', String(open));
-  });
+    clearTimeout(t);
+    // Keep the header's blur off until the panel has wiped away, so the fixed panel stays full screen.
+    if (open) document.documentElement.classList.add('menu-open');
+    else t = window.setTimeout(() => document.documentElement.classList.remove('menu-open'), 820);
+  };
+  menuBtn.addEventListener('click', () => setMenu(!mnav.classList.contains('open')));
   addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !mnav.hidden) { mnav.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.focus(); }
+    if (e.key === 'Escape' && mnav.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
   });
+  matchMedia('(min-width: 901px)').addEventListener('change', (m) => { if (m.matches) setMenu(false); });
 }
 
 const head = document.querySelector('.site-head');

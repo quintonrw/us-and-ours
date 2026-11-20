@@ -10,9 +10,16 @@ const cur = (href: string) => (path === href ? 'page' : undefined);
     <a class="nav-cta" href={site.bookingUrl}>Book Consultation</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span class="sr">Menu</span></button>
   </nav></div>
-  <div class="mnav" id="mnav" hidden><div class="wrap">
-    {nav.map((n) => <a href={n.href} aria-current={cur(n.href)}>{n.label}</a>)}
-    <a href="/contact" aria-current={cur('/contact')}>Contact</a>
-    <a class="btn" href={site.bookingUrl}>Book Consultation <span class="arr">→</span></a>
-  </div></div>
+  <div class="mnav" id="mnav" aria-hidden="true">
+    <svg class="mnav-forms" viewBox="0 0 116 80" aria-hidden="true"><use href="#markB" /></svg>
+    <div class="wrap">
+      <nav class="mnav-links" aria-label="Mobile">
+        {[...nav, { href: '/contact', label: 'Contact' }].map((n, i) => <a href={n.href} aria-current={cur(n.href)} style={`--i:${i}`}><span class="mk"><span>{n.label}</span></span></a>)}
+      </nav>
+      <div class="mnav-foot">
+        <div class="mk" style={`--i:${nav.length + 1}`}><span><a class="btn" href={site.bookingUrl}>Book Consultation <span class="arr">→</span></a></span></div>
+        <div class="mnav-meta"><a href={site.phoneHref}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a></div>
+      </div>
+    </div>
+  </div>
 </header>

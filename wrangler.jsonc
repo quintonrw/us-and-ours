@@ -1,0 +1,13 @@
+// Cloudflare Workers (static assets only, no server code).
+// Cloudflare runs `npm run build`, then `npx wrangler deploy`, which uploads dist/.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "us-and-ours",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    // Astro builds /about/index.html; serve it at /about and redirect /about/ to /about.
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "none"
+  }
+}
